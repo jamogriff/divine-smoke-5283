@@ -1,0 +1,8 @@
+<h2><%= @garden.name %></h2>
+
+<h3>Plants Close to Harvesting</h3>
+<ul>
+  <%= @garden.plants_near_harvest.each do |plant| %>
+    <li><%= plant.name %> has <%= plant.days_to_harvest %> left!</li>
+  <% end %>
+</ul>

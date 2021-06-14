@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe 'plot index page' do
 
   before :each do
+    GrowingPlant.destroy_all
     @garden = Garden.create!(name: "Sunshine Gardens", organic: true)
     @plot_1 = @garden.plots.create!(number: 10, size: "Big", direction: "East")
     @plot_2 = @garden.plots.create!(number: 20, size: "small", direction: "West")
