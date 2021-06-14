@@ -14,7 +14,7 @@ RSpec.describe 'garden show page' do
       @plant_4 = @plot_2.plants.create!(name: 'Blueberry', description: 'Blue', days_to_harvest: 90)
   end
 
-  it 'shows distinct plants from all plots near harvest' do
+  it 'shows distinct plants from all plots near harvest ordered by number planted' do
     visit "/gardens/#{@garden.id}"
     expect(page).to have_content @plant_1.name
     expect(page).to have_content @plant_3.name
