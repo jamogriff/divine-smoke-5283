@@ -3,6 +3,6 @@
 <h3>Plants Close to Harvesting</h3>
 <ul>
   <%= @garden.sorted_plants_near_harvest.each do |plant| %>
-    <li><%= plant.number_planted %> <%= plant.name %>'s have <%= plant.days_to_harvest %> days left until harvest!</li>
+    <li><%= plant.number_planted %> <%= plant.name %> plant's have <%= plant.days_to_harvest %> days left until harvest!</li>
   <% end %>
 </ul>
