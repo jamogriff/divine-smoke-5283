@@ -1,10 +1,10 @@
 <h2>Current Plots</h2>
 
-<ul>
+<ul id="plots">
 <% @plots.each do |plot| %>
   <li id="plot-<%=plot.id%>">
     <h4>Plot #<%=plot.number%></h4>
-    <ul>
+    <ul id="plants">
       <% plot.plants.each do |plant| %>
         <li><%=plant.name%>
           <%= link_to "Remove",
